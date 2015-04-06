@@ -1,1 +1,1 @@
-exports.TagsInput = require("./inputs/tags-input.jsx");
+exports.StringList = require("./inputs/string-list.jsx");

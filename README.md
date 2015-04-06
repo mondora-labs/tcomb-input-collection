@@ -8,7 +8,7 @@ A collection of custom inputs to be used as factories in `tcomb-form`-s.
 
 ## Available inputs
 
-- `TagsInput`
+- `StringList`
 
 ## TODO
 

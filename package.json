@@ -6,6 +6,10 @@
   "scripts": {
     "test": "env NODE_PATH=\"./src/\" mocha --compilers \".:./tests/compiler.js\" tests/unit/**/*.jsx"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mondora-labs/tcomb-input-collection"
+  },
   "peerDependencies": {
     "react": "^0.13.1",
     "tcomb-form": "^0.4.8"

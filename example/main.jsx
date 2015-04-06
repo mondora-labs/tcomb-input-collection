@@ -12,12 +12,12 @@ var App = React.createClass({
                     <div className="col-sm-6 col-sm-offset-3">
                         <t.form.Form
                             type={t.struct({
-                                tags: t.list(t.Str)
+                                strings: t.list(t.Str)
                             })}
                             options={{
                                 fields: {
-                                    tags: {
-                                        factory: Inputs.TagsInput
+                                    strings: {
+                                        factory: Inputs.StringList
                                     }
                                 }
                             }}

@@ -3,15 +3,15 @@ var t     = require("tcomb-form");
 
 var InputMixin = require("../mixins/input.js");
 
-var DefaultTagComponent = React.createClass({
+var DefaultStringComponent = React.createClass({
     propTypes: {
-        tag: React.PropTypes.string.isRequired,
+        string: React.PropTypes.string.isRequired,
         remove: React.PropTypes.func.isRequired
     },
     render: function () {
         return (
             <span style={{display: "inline-block", marginRight: 4}} className="label label-default">
-                {this.props.tag}
+                {this.props.string}
                 {" "}
                 <span style={{cursor: "pointer"}} onClick={this.props.remove}>
                     {"x"}
@@ -21,35 +21,35 @@ var DefaultTagComponent = React.createClass({
     }
 });
 
-var TagsList = React.createClass({
+var Strings = React.createClass({
     propTypes: {
-        tags: React.PropTypes.array.isRequired,
-        onTagRemove: React.PropTypes.func.isRequired,
+        strings: React.PropTypes.array.isRequired,
+        onStringRemove: React.PropTypes.func.isRequired,
         config: React.PropTypes.object.isRequired
     },
-    remove: function (tag) {
+    remove: function (string) {
         return (function () {
-            this.props.onTagRemove(tag);
+            this.props.onStringRemove(string);
         }).bind(this);
     },
-    renderTags: function () {
-        var TagComponent = this.props.config.tagComponent || DefaultTagComponent;
-        return this.props.tags.map((function (tag) {
+    renderStrings: function () {
+        var StringComponent = this.props.config.stringComponent || DefaultStringComponent;
+        return this.props.strings.map((function (string) {
             return (
-                <TagComponent key={tag} tag={tag} remove={this.remove(tag)} />
+                <StringComponent key={string} string={string} remove={this.remove(string)} />
             );
         }).bind(this));
     },
     render: function () {
         return (
             <div style={{width: "100%", marginBottom: 8}}>
-                {this.renderTags()}
+                {this.renderStrings()}
             </div>
         );
     }
 });
 
-var TagsInput = React.createClass({
+var StringList = React.createClass({
     mixins: [
         React.addons.LinkedStateMixin,
         InputMixin
@@ -66,21 +66,21 @@ var TagsInput = React.createClass({
     },
     onInputKeyPress: function (evt) {
         if (evt.key === "Enter") {
-            this.addTag();
+            this.addString();
         }
     },
-    addTag: function () {
-        var tag = this.state.inputValue.trim();
-        if (tag !== "" && this.state.value.indexOf(tag) === -1) {
-            this.onChange(this.state.value.concat(tag));
+    addString: function () {
+        var string = this.state.inputValue.trim();
+        if (string !== "" && this.state.value.indexOf(string) === -1) {
+            this.onChange(this.state.value.concat(string));
             this.setState({
                 inputValue: ""
             });
         }
     },
-    onTagRemove: function (tag) {
+    onStringRemove: function (string) {
         var currentValue = this.state.value;
-        var index = currentValue.indexOf(tag);
+        var index = currentValue.indexOf(string);
         var newValue = [].concat(
             currentValue.slice(0, index),
             currentValue.slice(index + 1)
@@ -107,7 +107,7 @@ var TagsInput = React.createClass({
         return (
             <div className={componentClass}>
                 {label ? <label className="control-label">{label}</label> : null}
-                <TagsList tags={this.state.value} onTagRemove={this.onTagRemove} config={config} />
+                <Strings strings={this.state.value} onStringRemove={this.onStringRemove} config={config} />
                 <div className="input-group">
                     <input
                         ref="input"
@@ -121,7 +121,7 @@ var TagsInput = React.createClass({
                     <span className="input-group-btn">
                         <button
                             type="button"
-                            onClick={this.addTag}
+                            onClick={this.addString}
                             className={buttonClass}
                         >
                             {config.addButtonContent || "Add"}
@@ -135,4 +135,4 @@ var TagsInput = React.createClass({
     }
 });
 
-module.exports = TagsInput;
+module.exports = StringList;
