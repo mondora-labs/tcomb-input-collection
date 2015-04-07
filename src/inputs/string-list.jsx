@@ -21,7 +21,7 @@ var DefaultStringComponent = React.createClass({
     }
 });
 
-var Strings = React.createClass({
+var List = React.createClass({
     propTypes: {
         strings: React.PropTypes.array.isRequired,
         onStringRemove: React.PropTypes.func.isRequired,
@@ -107,7 +107,7 @@ var StringList = React.createClass({
         return (
             <div className={componentClass}>
                 {label ? <label className="control-label">{label}</label> : null}
-                <Strings strings={this.state.value} onStringRemove={this.onStringRemove} config={config} />
+                <List strings={this.state.value} onStringRemove={this.onStringRemove} config={config} />
                 <div className="input-group">
                     <input
                         ref="input"
