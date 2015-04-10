@@ -1,5 +1,6 @@
 var browserSync = require("browser-sync");
 var gulp        = require("gulp");
+var ghPages     = require("gulp-gh-pages");
 var rename      = require("gulp-rename");
 var mocha       = require("gulp-spawn-mocha");
 var webpack     = require("gulp-webpack");
