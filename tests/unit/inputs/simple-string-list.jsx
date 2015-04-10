@@ -9,29 +9,29 @@ require("../../test-dom.js")("<html><body></body></html>");
 var React = require("react/addons");
 var u = React.addons.TestUtils;
 
-var StringList = require("inputs/string-list.jsx");
+var SimpleStringList = require("inputs/simple-string-list.jsx");
 
 var reg = function (string) {
     return new RegExp(string);
 };
 
-describe("StringList", function () {
+describe("SimpleStringList", function () {
     it("should contain a text input", function () {
         var input = u.findRenderedDOMComponentWithTag(
-            u.renderIntoDocument(<StringList ctx={{}} />),
+            u.renderIntoDocument(<SimpleStringList ctx={{}} />),
             "input"
         );
         input.props.type.should.equal("text");
     });
     it("should contain a button", function () {
         u.findRenderedDOMComponentWithTag(
-            u.renderIntoDocument(<StringList ctx={{}} />),
+            u.renderIntoDocument(<SimpleStringList ctx={{}} />),
             "button"
         );
     });
     it("should add strings on button click", function () {
         var onChange = sinon.spy();
-        var stringList = u.renderIntoDocument(<StringList ctx={{}} onChange={onChange} />);
+        var stringList = u.renderIntoDocument(<SimpleStringList ctx={{}} onChange={onChange} />);
         stringList.getDOMNode().innerHTML.should.not.match(reg("My string"));
         var input = u.findRenderedDOMComponentWithTag(stringList, "input").getDOMNode();
         var button = u.findRenderedDOMComponentWithTag(stringList, "button").getDOMNode();
@@ -44,7 +44,7 @@ describe("StringList", function () {
     });
     it("should add strings on enter", function () {
         var onChange = sinon.spy();
-        var stringList = u.renderIntoDocument(<StringList ctx={{}} onChange={onChange} />);
+        var stringList = u.renderIntoDocument(<SimpleStringList ctx={{}} onChange={onChange} />);
         stringList.getDOMNode().innerHTML.should.not.match(reg("My string"));
         var input = u.findRenderedDOMComponentWithTag(stringList, "input").getDOMNode();
         React.addons.TestUtils.Simulate.change(input, {target: {value: "My string"}});
@@ -56,7 +56,7 @@ describe("StringList", function () {
     });
     it("should remove strings", function () {
         var onChange = sinon.spy();
-        var stringList = u.renderIntoDocument(<StringList ctx={{}} onChange={onChange} value={["My string"]} />);
+        var stringList = u.renderIntoDocument(<SimpleStringList ctx={{}} onChange={onChange} value={["My string"]} />);
         stringList.getDOMNode().innerHTML.should.match(reg("My string"));
         var strings = u.findAllInRenderedTree(stringList, function (node) {
             return (

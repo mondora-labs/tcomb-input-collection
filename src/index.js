@@ -1,1 +1,2 @@
-exports.StringList = require("./inputs/string-list.jsx");
+exports.SimpleStringList = require("./inputs/simple-string-list.jsx");
+exports.List = require("./inputs/list.jsx");

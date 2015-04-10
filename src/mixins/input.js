@@ -1,4 +1,5 @@
 var React = require("react");
+var t     = require("tcomb-validation");
 
 var InputMixin = {
     propTypes: {

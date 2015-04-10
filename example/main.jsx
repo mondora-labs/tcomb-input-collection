@@ -1,4 +1,4 @@
-var React = require("react");
+var React = require("react/addons");
 var t     = require("tcomb-form");
 
 var Inputs = require("../");
@@ -10,6 +10,7 @@ var App = React.createClass({
                 <br />
                 <div className="row">
                     <div className="col-sm-6 col-sm-offset-3">
+                        <h3>SimpleStringList input</h3>
                         <t.form.Form
                             type={t.struct({
                                 strings: t.list(t.Str)
@@ -17,7 +18,7 @@ var App = React.createClass({
                             options={{
                                 fields: {
                                     strings: {
-                                        factory: Inputs.StringList
+                                        factory: Inputs.SimpleStringList
                                     }
                                 }
                             }}
@@ -29,3 +30,5 @@ var App = React.createClass({
     }
 });
 React.render(<App />, document.body);
+
+window.React = React;
