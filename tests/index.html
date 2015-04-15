@@ -13,14 +13,14 @@
       <div class="container">
         <div class="report-info-cnt">
           <h1 class="report-title">tcomb-input-collection</h1>
-          <h3 class="report-date">Friday, April 10 2015, 07:45pm</h3>
+          <h3 class="report-date">Wednesday, April 15 2015, 11:42am</h3>
         </div>
         <div class="quick-summary-cnt">
             <ul class="list-unstyled quick-summary">
-              <li class="qs-item summary-duration" title="Duration">84<span>MS</span></li>
-              <li class="qs-item summary-suites" title="Suites">1</li>
-              <li class="qs-item summary-tests" title="Tests">5</li>
-              <li class="qs-item summary-passes" title="Passed" data-filter="passed">5</li>
+              <li class="qs-item summary-duration" title="Duration">148<span>MS</span></li>
+              <li class="qs-item summary-suites" title="Suites">2</li>
+              <li class="qs-item summary-tests" title="Tests">9</li>
+              <li class="qs-item summary-passes" title="Passed" data-filter="passed">9</li>
               <li class="qs-item summary-failures" title="Failed" data-filter="failed">0</li>
               <li class="qs-item summary-pending" title="Pending" data-filter="pending">0</li>
             </ul>        </div>
@@ -32,19 +32,19 @@
       <div class="container">
           <div class="row">
             <div class="summary-col summary-duration">
-              <h1 class="summary-count">84<span>MS</span></h1>
+              <h1 class="summary-count">148<span>MS</span></h1>
               <h4 class="summary-label">MS</h4>
             </div>
             <div class="summary-col summary-suites" title="Suites">
-              <h1 class="summary-count">1</h1>
-              <h4 class="summary-label">Suite</h4>
+              <h1 class="summary-count">2</h1>
+              <h4 class="summary-label">Suites</h4>
             </div>
             <div class="summary-col summary-tests" title="Tests">
-              <h1 class="summary-count">5</h1>
+              <h1 class="summary-count">9</h1>
               <h4 class="summary-label">Tests</h4>
             </div>
             <div class="summary-col summary-passes" data-filter="passed" title="Passed">
-              <h1 class="summary-count">5</h1>
+              <h1 class="summary-count">9</h1>
               <h4 class="summary-label">Passed</h4>
             </div>
             <div class="summary-col summary-failures" data-filter="failed" title="Failed">
@@ -68,17 +68,155 @@
     <!-- Suites -->
     <div class="details container">
             <section class="suite-wrap">
-              <div id="a1a2f2b8-b0b2-43a6-ada5-0bc101c36a22" class="suite has-tests has-passed">
-                <h3 class="suite-title">SimpleStringList</h3>
-                <h5 class="suite-filename">/tests/unit/inputs/simple-string-list.jsx</h5>
+              <div id="3b5137c9-afb8-42b3-995d-1715efdb268b" class="suite has-tests has-passed">
+                <h3 class="suite-title">Multiselect</h3>
+                <h5 class="suite-filename">/tests/unit/inputs/multiselect.jsx</h5>
                 <!-- Suite Chart -->
                 <div class="suite-chart-wrap">
-                  <canvas id="a1a2f2b8-b0b2-43a6-ada5-0bc101c36a22" class="suite-chart" width="50" height="50" data-total-passes="5" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+                  <canvas id="3b5137c9-afb8-42b3-995d-1715efdb268b" class="suite-chart" width="50" height="50" data-total-passes="4" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
                 </div>
                 <div class="suite-data-wrap">
                   <!-- Suite Summary -->
                   <ul class="suite-summary list-unstyled">
-                    <li class="suite-summary-item duration">67 ms</li>
+                    <li class="suite-summary-item duration">35 ms</li>
+                    <li class="suite-summary-item tests">4</li>
+                    <li class="suite-summary-item passed">4</li>
+                    <li class="suite-summary-item failed">0</li>
+                    <li class="suite-summary-item pending">0</li>
+                  </ul>
+                  <!-- Test Info -->
+                  <div class="suite-test-wrap">
+                    <div class="suite-test-header" data-toggle="collapse" data-target="#3b5137c9-afb8-42b3-995d-1715efdb268b-test-list">
+                      <h4 class="suite-test-header-title">Tests</h4>
+                    </div>
+                    <div id="3b5137c9-afb8-42b3-995d-1715efdb268b-test-list" class="list-group test-list collapse in">
+                        <div id="d3d92134-9b83-4692-b3a5-0b4168d6051d" class="list-group-item test passed">
+                          <!-- Test Heading -->
+                          <div class="test-heading">
+                            <h4 class="test-title">
+                              <span class="text-muted hidden"> it </span>
+                              should contain checkboxes
+                            </h4>
+                            <div class="pull-right">
+                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#d3d92134-9b83-4692-b3a5-0b4168d6051d > .test-code.collapse">Code</button>
+                              <span class="test-duration fast">1 ms</span>
+                            </div>
+                          </div>
+                          <!-- Test Errors -->
+                          <!-- Test Code -->
+                          <div class="test-code collapse">
+                            <pre><code class="hljs javascript small">checkboxes.length.should.equal(<span class="hljs-number">3</span>);
+                        checkboxes.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(checkbox)</span> </span>{
+                            checkbox.props.type.should.equal(<span class="hljs-string">"checkbox"</span>);
+                        });</code></pre>
+                          </div>
+                          <!-- Test Error Stack -->
+                        </div>            <div id="fccd0be8-4eb5-45be-b0b1-9caff6127f51" class="list-group-item test passed">
+                          <!-- Test Heading -->
+                          <div class="test-heading">
+                            <h4 class="test-title">
+                              <span class="text-muted hidden"> it </span>
+                              should render checkboxes with the correct checked status based on the value passed to the component
+                            </h4>
+                            <div class="pull-right">
+                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#fccd0be8-4eb5-45be-b0b1-9caff6127f51 > .test-code.collapse">Code</button>
+                              <span class="test-duration fast">1 ms</span>
+                            </div>
+                          </div>
+                          <!-- Test Errors -->
+                          <!-- Test Code -->
+                          <div class="test-code collapse">
+                            <pre><code class="hljs javascript small"><span class="hljs-keyword">var</span> aInput = checkboxes[<span class="hljs-number">0</span>].getDOMNode();
+                        <span class="hljs-keyword">var</span> bInput = checkboxes[<span class="hljs-number">1</span>].getDOMNode();
+                        <span class="hljs-keyword">var</span> cInput = checkboxes[<span class="hljs-number">2</span>].getDOMNode();
+                        aInput.checked.should.equal(<span class="hljs-literal">true</span>);
+                        bInput.checked.should.equal(<span class="hljs-literal">false</span>);
+                        cInput.checked.should.equal(<span class="hljs-literal">false</span>);</code></pre>
+                          </div>
+                          <!-- Test Error Stack -->
+                        </div>            <div id="da8ae2ee-1c9e-4787-8fe7-ba6717dd3593" class="list-group-item test passed">
+                          <!-- Test Heading -->
+                          <div class="test-heading">
+                            <h4 class="test-title">
+                              <span class="text-muted hidden"> it </span>
+                              should change checked status on checkbox click
+                            </h4>
+                            <div class="pull-right">
+                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#da8ae2ee-1c9e-4787-8fe7-ba6717dd3593 > .test-code.collapse">Code</button>
+                              <span class="test-duration fast">26 ms</span>
+                            </div>
+                          </div>
+                          <!-- Test Errors -->
+                          <!-- Test Code -->
+                          <div class="test-code collapse">
+                            <pre><code class="hljs javascript small"><span class="hljs-keyword">var</span> aInput = checkboxes[<span class="hljs-number">0</span>].getDOMNode();
+                        <span class="hljs-keyword">var</span> bInput = checkboxes[<span class="hljs-number">1</span>].getDOMNode();
+                        <span class="hljs-keyword">var</span> cInput = checkboxes[<span class="hljs-number">2</span>].getDOMNode();
+                        React.addons.TestUtils.Simulate.change(aInput);
+                        React.addons.TestUtils.Simulate.change(bInput);
+                        React.addons.TestUtils.Simulate.change(cInput);
+                        aInput.checked.should.equal(<span class="hljs-literal">false</span>);
+                        bInput.checked.should.equal(<span class="hljs-literal">true</span>);
+                        cInput.checked.should.equal(<span class="hljs-literal">true</span>);
+                        React.addons.TestUtils.Simulate.change(aInput);
+                        React.addons.TestUtils.Simulate.change(bInput);
+                        React.addons.TestUtils.Simulate.change(cInput);
+                        aInput.checked.should.equal(<span class="hljs-literal">true</span>);
+                        bInput.checked.should.equal(<span class="hljs-literal">false</span>);
+                        cInput.checked.should.equal(<span class="hljs-literal">false</span>);</code></pre>
+                          </div>
+                          <!-- Test Error Stack -->
+                        </div>            <div id="32214fdb-3a3a-41fe-8494-e376fc4a8a6d" class="list-group-item test passed">
+                          <!-- Test Heading -->
+                          <div class="test-heading">
+                            <h4 class="test-title">
+                              <span class="text-muted hidden"> it </span>
+                              should call onChange with the new status
+                            </h4>
+                            <div class="pull-right">
+                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#32214fdb-3a3a-41fe-8494-e376fc4a8a6d > .test-code.collapse">Code</button>
+                              <span class="test-duration fast">7 ms</span>
+                            </div>
+                          </div>
+                          <!-- Test Errors -->
+                          <!-- Test Code -->
+                          <div class="test-code collapse">
+                            <pre><code class="hljs javascript small"><span class="hljs-keyword">var</span> aInput = checkboxes[<span class="hljs-number">0</span>].getDOMNode();
+                        <span class="hljs-keyword">var</span> bInput = checkboxes[<span class="hljs-number">1</span>].getDOMNode();
+                        <span class="hljs-keyword">var</span> cInput = checkboxes[<span class="hljs-number">2</span>].getDOMNode();
+                        <span class="hljs-comment">// Click on checkbox a</span>
+                        onChange.reset();
+                        React.addons.TestUtils.Simulate.change(aInput);
+                        onChange.calledWith([]).should.equal(<span class="hljs-literal">true</span>);
+                        <span class="hljs-comment">// Click on checkbox b</span>
+                        onChange.reset();
+                        React.addons.TestUtils.Simulate.change(bInput);
+                        onChange.calledWith([<span class="hljs-string">"b"</span>]).should.equal(<span class="hljs-literal">true</span>);
+                        <span class="hljs-comment">// Click on checkbox c</span>
+                        onChange.reset();
+                        React.addons.TestUtils.Simulate.change(cInput);
+                        onChange.calledWith([<span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>]).should.equal(<span class="hljs-literal">true</span>);</code></pre>
+                          </div>
+                          <!-- Test Error Stack -->
+                        </div>        </div>
+                  </div>
+                </div>
+            
+            
+              </div>
+            </section>
+            <section class="suite-wrap">
+              <div id="23d501ee-a745-40a8-baf9-5a0f94340c63" class="suite has-tests has-passed">
+                <h3 class="suite-title">SimpleStringList</h3>
+                <h5 class="suite-filename">/tests/unit/inputs/simple-string-list.jsx</h5>
+                <!-- Suite Chart -->
+                <div class="suite-chart-wrap">
+                  <canvas id="23d501ee-a745-40a8-baf9-5a0f94340c63" class="suite-chart" width="50" height="50" data-total-passes="5" data-total-failures="0" data-total-pending="0" data-total-skipped="0"></canvas>
+                </div>
+                <div class="suite-data-wrap">
+                  <!-- Suite Summary -->
+                  <ul class="suite-summary list-unstyled">
+                    <li class="suite-summary-item duration">42 ms</li>
                     <li class="suite-summary-item tests">5</li>
                     <li class="suite-summary-item passed">5</li>
                     <li class="suite-summary-item failed">0</li>
@@ -86,11 +224,11 @@
                   </ul>
                   <!-- Test Info -->
                   <div class="suite-test-wrap">
-                    <div class="suite-test-header" data-toggle="collapse" data-target="#a1a2f2b8-b0b2-43a6-ada5-0bc101c36a22-test-list">
+                    <div class="suite-test-header" data-toggle="collapse" data-target="#23d501ee-a745-40a8-baf9-5a0f94340c63-test-list">
                       <h4 class="suite-test-header-title">Tests</h4>
                     </div>
-                    <div id="a1a2f2b8-b0b2-43a6-ada5-0bc101c36a22-test-list" class="list-group test-list collapse in">
-                        <div id="02e9a8fa-d21f-47ad-93b0-b78c3e2e68b0" class="list-group-item test passed">
+                    <div id="23d501ee-a745-40a8-baf9-5a0f94340c63-test-list" class="list-group test-list collapse in">
+                        <div id="935d61db-f42e-4de4-9db6-3068216b9b23" class="list-group-item test passed">
                           <!-- Test Heading -->
                           <div class="test-heading">
                             <h4 class="test-title">
@@ -98,8 +236,8 @@
                               should contain a text input
                             </h4>
                             <div class="pull-right">
-                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#02e9a8fa-d21f-47ad-93b0-b78c3e2e68b0 > .test-code.collapse">Code</button>
-                              <span class="test-duration fast">22 ms</span>
+                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#935d61db-f42e-4de4-9db6-3068216b9b23 > .test-code.collapse">Code</button>
+                              <span class="test-duration fast">8 ms</span>
                             </div>
                           </div>
                           <!-- Test Errors -->
@@ -112,7 +250,7 @@
                         input.props.type.should.equal(<span class="hljs-string">"text"</span>);</code></pre>
                           </div>
                           <!-- Test Error Stack -->
-                        </div>            <div id="093b6663-c760-4cca-acc2-e03663e9ec0b" class="list-group-item test passed">
+                        </div>            <div id="b0e744cb-9e43-43f9-801e-3509a5a848b7" class="list-group-item test passed">
                           <!-- Test Heading -->
                           <div class="test-heading">
                             <h4 class="test-title">
@@ -120,7 +258,7 @@
                               should contain a button
                             </h4>
                             <div class="pull-right">
-                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#093b6663-c760-4cca-acc2-e03663e9ec0b > .test-code.collapse">Code</button>
+                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#b0e744cb-9e43-43f9-801e-3509a5a848b7 > .test-code.collapse">Code</button>
                               <span class="test-duration fast">4 ms</span>
                             </div>
                           </div>
@@ -133,7 +271,7 @@
                         );</code></pre>
                           </div>
                           <!-- Test Error Stack -->
-                        </div>            <div id="8fd781b6-4e5d-45b4-979e-fb55913091c5" class="list-group-item test passed">
+                        </div>            <div id="e10c7873-6b37-4c9f-a7f2-0cc641612b8d" class="list-group-item test passed">
                           <!-- Test Heading -->
                           <div class="test-heading">
                             <h4 class="test-title">
@@ -141,27 +279,27 @@
                               should add strings on button click
                             </h4>
                             <div class="pull-right">
-                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#8fd781b6-4e5d-45b4-979e-fb55913091c5 > .test-code.collapse">Code</button>
-                              <span class="test-duration fast">24 ms</span>
+                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#e10c7873-6b37-4c9f-a7f2-0cc641612b8d > .test-code.collapse">Code</button>
+                              <span class="test-duration fast">12 ms</span>
                             </div>
                           </div>
                           <!-- Test Errors -->
                           <!-- Test Code -->
                           <div class="test-code collapse">
                             <pre><code class="hljs javascript small"><span class="hljs-keyword">var</span> onChange = sinon.spy();
-                        <span class="hljs-keyword">var</span> stringList = u.renderIntoDocument(React.createElement(SimpleStringList, {ctx: {}, onChange: onChange}));
-                        stringList.getDOMNode().innerHTML.should.not.match(reg(<span class="hljs-string">"My string"</span>));
-                        <span class="hljs-keyword">var</span> input = u.findRenderedDOMComponentWithTag(stringList, <span class="hljs-string">"input"</span>).getDOMNode();
-                        <span class="hljs-keyword">var</span> button = u.findRenderedDOMComponentWithTag(stringList, <span class="hljs-string">"button"</span>).getDOMNode();
+                        <span class="hljs-keyword">var</span> simpleStringList = u.renderIntoDocument(React.createElement(SimpleStringList, {ctx: {}, onChange: onChange}));
+                        simpleStringList.getDOMNode().innerHTML.should.not.match(reg(<span class="hljs-string">"My string"</span>));
+                        <span class="hljs-keyword">var</span> input = u.findRenderedDOMComponentWithTag(simpleStringList, <span class="hljs-string">"input"</span>).getDOMNode();
+                        <span class="hljs-keyword">var</span> button = u.findRenderedDOMComponentWithTag(simpleStringList, <span class="hljs-string">"button"</span>).getDOMNode();
                         React.addons.TestUtils.Simulate.change(input, {target: {value: <span class="hljs-string">"My string"</span>}});
                         input.value.should.equal(<span class="hljs-string">"My string"</span>);
                         React.addons.TestUtils.Simulate.click(button);
                         onChange.called.should.equal(<span class="hljs-literal">true</span>);
-                        stringList.getDOMNode().innerHTML.should.match(reg(<span class="hljs-string">"My string"</span>));
+                        simpleStringList.getDOMNode().innerHTML.should.match(reg(<span class="hljs-string">"My string"</span>));
                         input.value.should.equal(<span class="hljs-string">""</span>);</code></pre>
                           </div>
                           <!-- Test Error Stack -->
-                        </div>            <div id="efd4f5a1-6ce1-40cb-a9ad-4e6b3aaf89a7" class="list-group-item test passed">
+                        </div>            <div id="42fcf6a0-eecd-4a94-aae4-94bb24f8753a" class="list-group-item test passed">
                           <!-- Test Heading -->
                           <div class="test-heading">
                             <h4 class="test-title">
@@ -169,34 +307,7 @@
                               should add strings on enter
                             </h4>
                             <div class="pull-right">
-                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#efd4f5a1-6ce1-40cb-a9ad-4e6b3aaf89a7 > .test-code.collapse">Code</button>
-                              <span class="test-duration fast">8 ms</span>
-                            </div>
-                          </div>
-                          <!-- Test Errors -->
-                          <!-- Test Code -->
-                          <div class="test-code collapse">
-                            <pre><code class="hljs javascript small"><span class="hljs-keyword">var</span> onChange = sinon.spy();
-                        <span class="hljs-keyword">var</span> stringList = u.renderIntoDocument(React.createElement(SimpleStringList, {ctx: {}, onChange: onChange}));
-                        stringList.getDOMNode().innerHTML.should.not.match(reg(<span class="hljs-string">"My string"</span>));
-                        <span class="hljs-keyword">var</span> input = u.findRenderedDOMComponentWithTag(stringList, <span class="hljs-string">"input"</span>).getDOMNode();
-                        React.addons.TestUtils.Simulate.change(input, {target: {value: <span class="hljs-string">"My string"</span>}});
-                        input.value.should.equal(<span class="hljs-string">"My string"</span>);
-                        React.addons.TestUtils.Simulate.keyPress(input, {key: <span class="hljs-string">"Enter"</span>});
-                        onChange.called.should.equal(<span class="hljs-literal">true</span>);
-                        stringList.getDOMNode().innerHTML.should.match(reg(<span class="hljs-string">"My string"</span>));
-                        input.value.should.equal(<span class="hljs-string">""</span>);</code></pre>
-                          </div>
-                          <!-- Test Error Stack -->
-                        </div>            <div id="9ce06390-d442-414a-a827-e73e9be9ca45" class="list-group-item test passed">
-                          <!-- Test Heading -->
-                          <div class="test-heading">
-                            <h4 class="test-title">
-                              <span class="text-muted hidden"> it </span>
-                              should remove strings
-                            </h4>
-                            <div class="pull-right">
-                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#9ce06390-d442-414a-a827-e73e9be9ca45 > .test-code.collapse">Code</button>
+                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#42fcf6a0-eecd-4a94-aae4-94bb24f8753a > .test-code.collapse">Code</button>
                               <span class="test-duration fast">9 ms</span>
                             </div>
                           </div>
@@ -204,9 +315,36 @@
                           <!-- Test Code -->
                           <div class="test-code collapse">
                             <pre><code class="hljs javascript small"><span class="hljs-keyword">var</span> onChange = sinon.spy();
-                        <span class="hljs-keyword">var</span> stringList = u.renderIntoDocument(React.createElement(SimpleStringList, {ctx: {}, onChange: onChange, value: [<span class="hljs-string">"My string"</span>]}));
-                        stringList.getDOMNode().innerHTML.should.match(reg(<span class="hljs-string">"My string"</span>));
-                        <span class="hljs-keyword">var</span> strings = u.findAllInRenderedTree(stringList, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(node)</span> </span>{
+                        <span class="hljs-keyword">var</span> simpleStringList = u.renderIntoDocument(React.createElement(SimpleStringList, {ctx: {}, onChange: onChange}));
+                        simpleStringList.getDOMNode().innerHTML.should.not.match(reg(<span class="hljs-string">"My string"</span>));
+                        <span class="hljs-keyword">var</span> input = u.findRenderedDOMComponentWithTag(simpleStringList, <span class="hljs-string">"input"</span>).getDOMNode();
+                        React.addons.TestUtils.Simulate.change(input, {target: {value: <span class="hljs-string">"My string"</span>}});
+                        input.value.should.equal(<span class="hljs-string">"My string"</span>);
+                        React.addons.TestUtils.Simulate.keyPress(input, {key: <span class="hljs-string">"Enter"</span>});
+                        onChange.called.should.equal(<span class="hljs-literal">true</span>);
+                        simpleStringList.getDOMNode().innerHTML.should.match(reg(<span class="hljs-string">"My string"</span>));
+                        input.value.should.equal(<span class="hljs-string">""</span>);</code></pre>
+                          </div>
+                          <!-- Test Error Stack -->
+                        </div>            <div id="e587e14f-e718-43e8-a873-c36bb4e3d3df" class="list-group-item test passed">
+                          <!-- Test Heading -->
+                          <div class="test-heading">
+                            <h4 class="test-title">
+                              <span class="text-muted hidden"> it </span>
+                              should remove strings
+                            </h4>
+                            <div class="pull-right">
+                              <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#e587e14f-e718-43e8-a873-c36bb4e3d3df > .test-code.collapse">Code</button>
+                              <span class="test-duration fast">9 ms</span>
+                            </div>
+                          </div>
+                          <!-- Test Errors -->
+                          <!-- Test Code -->
+                          <div class="test-code collapse">
+                            <pre><code class="hljs javascript small"><span class="hljs-keyword">var</span> onChange = sinon.spy();
+                        <span class="hljs-keyword">var</span> simpleStringList = u.renderIntoDocument(React.createElement(SimpleStringList, {ctx: {}, onChange: onChange, value: [<span class="hljs-string">"My string"</span>]}));
+                        simpleStringList.getDOMNode().innerHTML.should.match(reg(<span class="hljs-string">"My string"</span>));
+                        <span class="hljs-keyword">var</span> strings = u.findAllInRenderedTree(simpleStringList, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(node)</span> </span>{
                             <span class="hljs-keyword">return</span> (
                                 <span class="hljs-keyword">typeof</span> node.props.onClick === <span class="hljs-string">"function"</span> &amp;&amp;
                                 node.props.type !== <span class="hljs-string">"button"</span>
@@ -215,7 +353,7 @@
                         <span class="hljs-keyword">var</span> string = strings[<span class="hljs-number">0</span>].getDOMNode();
                         React.addons.TestUtils.Simulate.click(string);
                         onChange.called.should.equal(<span class="hljs-literal">true</span>);
-                        stringList.getDOMNode().innerHTML.should.not.match(reg(<span class="hljs-string">"My string"</span>));</code></pre>
+                        simpleStringList.getDOMNode().innerHTML.should.not.match(reg(<span class="hljs-string">"My string"</span>));</code></pre>
                           </div>
                           <!-- Test Error Stack -->
                         </div>        </div>
