@@ -32,5 +32,10 @@
     "tcomb-form": "^0.4.8"
   },
   "author": "Paolo Scanferla <paolo.scanferla@mondora.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash.chunk": "^3.0.0",
+    "lodash.includes": "^3.1.0",
+    "lodash.keys": "^3.0.5"
+  }
 }

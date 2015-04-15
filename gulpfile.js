@@ -9,7 +9,7 @@ var webpack     = require("gulp-webpack");
 *   Build tasks
 */
 gulp.task("run-tests", function () {
-    return gulp.src("./tests/unit/**/*.jsx")
+    var stream = gulp.src("./tests/unit/**/*.jsx")
         .pipe(mocha({
             compilers: ".:./tests/compiler.js",
             reporter: "mochawesome",
@@ -20,10 +20,18 @@ gulp.task("run-tests", function () {
                 MOCHAWESOME_REPORTNAME: "index"
             }
         }))
-        .on("error", function (ignore) {
-            // Failing tests count as errors, ignore them
+        .on("error", function (err) {
+            /*
+            *   Failing tests raise an error in the pipeline. This causes the
+            *   watch to stop (which in turn makes the process exit).
+            *   Therefore, when fails occur, manually reload the browser and
+            *   end the stream.
+            */
+            browserSync.reload();
+            stream.end();
         })
         .pipe(reload({stream: true}));
+    return stream;
 });
 gulp.task("build-example-html", function () {
     return gulp.src("./example/main.html")
@@ -63,7 +71,9 @@ gulp.task("dev", ["run-tests", "build-example-html", "build-example-js"], functi
     });
     gulp.watch([
         "./src/**/*.jsx",
+        "./src/**/*.js",
         "./tests/unit/**/*.jsx",
+        "./tests/unit/**/*.js",
         "./example/main.html",
         "./example/main.jsx"
     ], [
