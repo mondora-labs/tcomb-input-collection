@@ -31,7 +31,7 @@ var List = React.createClass({
                     element={element}
                     change={this.change(index)}
                     remove={this.remove(index)}
-                    options={this.props.oprions}
+                    options={this.props.options}
                 />
             );
         }).bind(this));
