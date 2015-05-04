@@ -8,7 +8,7 @@ var StringAdder = React.createClass({
     propTypes: {
         elements: React.PropTypes.array.isRequired,
         add: React.PropTypes.func.isRequired,
-        config: React.PropTypes.object.isRequired
+        options: React.PropTypes.object.isRequired
     },
     getInitialState: function () {
         return {

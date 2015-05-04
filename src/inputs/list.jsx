@@ -10,7 +10,7 @@ var List = React.createClass({
         changeListElement: React.PropTypes.func.isRequired,
         removeListElement: React.PropTypes.func.isRequired,
         elementComponent: React.PropTypes.func.isRequired,
-        config: React.PropTypes.object.isRequired
+        options: React.PropTypes.object.isRequired
     },
     remove: function (index) {
         return (function () {
@@ -31,6 +31,7 @@ var List = React.createClass({
                     element={element}
                     change={this.change(index)}
                     remove={this.remove(index)}
+                    options={this.props.oprions}
                 />
             );
         }).bind(this));
@@ -90,7 +91,6 @@ var ListInput = React.createClass({
     },
     render: function () {
         var opts = this.props.options || {};
-        var config = opts.config || {};
         var ctx = this.props.ctx;
         var label = opts.label;
         if (!label && ctx.auto === "labels") {
@@ -114,12 +114,12 @@ var ListInput = React.createClass({
                     elementComponent={this.props.elementComponent}
                     changeListElement={this.changeListElement}
                     removeListElement={this.removeListElement}
-                    config={config}
+                    options={opts}
                 />
                 <this.props.addComponent
                     elements={this.state.value}
                     add={this.addListElement}
-                    config={config}
+                    options={opts}
                 />
                 {this.state.hasError ? <span className="help-block error-block">{error}</span> : null}
                 {opts.help ? <span className="help-block">{opts.help}</span> : null}
