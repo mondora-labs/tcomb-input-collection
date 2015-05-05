@@ -78,9 +78,13 @@ var SimpleStringList = React.createClass({
     keyGetter: function (string) {
         return string;
     },
+    getValue: function () {
+        return this.refs.list.getValue();
+    },
     render: function () {
         return (
             <List
+                ref="list"
                 {...this.props}
                 keyGetter={this.keyGetter}
                 addComponent={StringAdder}
