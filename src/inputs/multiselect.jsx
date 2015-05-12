@@ -96,7 +96,7 @@ var MultiselectInput = React.createClass({
         return chunk(checkboxes, columns)
             .map(function (checkboxesChunk, index) {
                 return (
-                    <div key={index} className="row">
+                    <div key={index}>
                         {checkboxesChunk}
                     </div>
                 );
