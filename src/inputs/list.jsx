@@ -61,7 +61,10 @@ var ListInput = React.createClass({
     },
     addListElement: function (listElement) {
         var newValue = [].concat(
-            this.state.value,
+            // If this.props.value is null, the default value prop is not used,
+            // therefore this.state.value results null. It's a (fixed) bug in
+            // tcomb-form. Since we can't update tcomb-form, we're stuck with it
+            this.state.value || [],
             // Wrap it in an array in order to prevent unwanted bahaviour if the
             // listElement is itself an array (in which case, its elements would
             // be concat-ed)
@@ -116,8 +119,13 @@ var ListInput = React.createClass({
                     removeListElement={this.removeListElement}
                     options={opts}
                 />
+                {/*
+                    If this.props.value is null, the default value prop is not used,
+                    therefore this.state.value results null. It's a (fixed) bug in
+                    tcomb-form. Since we can't update tcomb-form, we're stuck with it
+                */}
                 <this.props.addComponent
-                    elements={this.state.value}
+                    elements={this.state.value || []}
                     add={this.addListElement}
                     options={opts}
                 />
