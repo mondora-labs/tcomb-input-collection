@@ -111,19 +111,19 @@ var ListInput = React.createClass({
         return (
             <div className={componentClass}>
                 {label ? <label className="control-label">{label}</label> : null}
-                <List
-                    keyGetter={this.props.keyGetter}
-                    elements={this.state.value}
-                    elementComponent={this.props.elementComponent}
-                    changeListElement={this.changeListElement}
-                    removeListElement={this.removeListElement}
-                    options={opts}
-                />
                 {/*
                     If this.props.value is null, the default value prop is not used,
                     therefore this.state.value results null. It's a (fixed) bug in
                     tcomb-form. Since we can't update tcomb-form, we're stuck with it
                 */}
+                <List
+                    keyGetter={this.props.keyGetter}
+                    elements={this.state.value || []}
+                    elementComponent={this.props.elementComponent}
+                    changeListElement={this.changeListElement}
+                    removeListElement={this.removeListElement}
+                    options={opts}
+                />
                 <this.props.addComponent
                     elements={this.state.value || []}
                     add={this.addListElement}
